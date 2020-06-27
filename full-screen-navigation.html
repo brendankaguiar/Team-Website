@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<!-- Brendan Aguiar 10/22/19 -->
+<html lang="en">
+<head>
+<link rel="stylesheet" href="css/content-template.css">
+<link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet"> <!-- Embedded font for title and headings-->
+<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> <!-- Embedded font for nav links and parapgraphs -->
+
+<title>Full Screen Navigation</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	#content-wrapper ul li {
+		font-family: 'Lato', sans-serif;
+	}
+	#content-wrapper ul li a:link {
+		color:#ffa500;
+		text-decoration:none;
+	}
+	#content-wrapper ul li a:hover {
+		color:#ffa500;
+		text-decoration: underline;
+	}
+	#content-wrapper ul li a:visited {
+		color:#ffa500;
+		text-decoration: none;
+	}
+  /* iframe container and tag css constructed with the help of David King */
+  .iframe-container {
+overflow: hidden;
+padding-top: 60%;
+position: relative;
+}
+
+.iframe-container iframe {
+border: 0;
+height: 100%;
+left: 0;
+position: absolute;
+top: 0;
+width: 80%;
+}
+</style>
+</head>
+<body>
+	<header>
+		<div class="title"> <!-- container for title -->
+			<h1>CURRENT WEB DEVELOPMENT TRENDS</h1>
+		</div>
+		<nav>
+			<ul><!-- Here are the links to the webpages. Make sure you link your page with the same file pathing as I did -->
+				<li><a href="responsive-images.html">Responsive Images</a></li>
+				<li><a href="responsive-web-design.html">Responsive Web Design</a></li>
+				<li><a href="html-components.html">New Standards/Components</a></li>
+				<li><a href="full-screen-nav.html">Full Screen Navigation</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div id="content-wrapper"> <!-- Place content here-->
+		<h1>FULL SCREEN NAVIGATION</h1>
+			<iframe src="https://giphy.com/embed/xT0Gqn9yuw8hnPGn5K" width="100%" height="100%" style="position:relative;" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/motion-graphics-animacion-cityarts-xT0Gqn9yuw8hnPGn5K"></a></p>
+  		<h2>WHERE DID THE MENU GO</h2>
+			<p>In the 29 years that the world wide web has been around, it has experienced several creative developments. Most recently with the increase of mobile devices using the internet, we have adapted to using hamburger icons as buttons to minimize menus and maximize information that the user receives.</p>
+	     <img src="images/responive-icon.gif" alt="Example of responsive icon" style="max-width:100%;">
+      <p>Hamburger icons were so popular that even desktop versions of websites began using the hamburger icon so the user can more freely have access to the page with little to no clutter. This minimalistic approach began to show up in even the most popular of websites to minimize the space taken up by menus. Eventually bigger name sites like Facebook started showing up with no navigation menus in site.</p>
+			<h2>COMPETING WITH THE HAMBURGER ICON</h2>
+<!--javascript  by w3Schools-->
+<button onclick="myFunction()"><img src="images/hi.png"style="max-width:100%;" /></button>
+<img id="img" src="images/fbcapture.png" style="display:none;max-width:100%;">
+<script>
+function myFunction() {
+var x = document.getElementById("img");
+if (x.style.display === "none") {
+x.style.display = "block";
+} else {
+x.style.display = "none";
+}
+}
+</script>
+<p>Click the hamburger icon to reveal Facebook's homepage and notice it's limited to only a sign up and login form and three buttons to help the user login.</p>
+			<p>Reducing the amount of content on a screen as well as the invention of responsive web design in 2010 and media queries in 2012 has made it easier for desktop websites to compete with and even complement the mobile versions. Nonetheless, many web developers still found themselves taking menu design to the extreme to compete.</p>
+			<img src="images/menu.png" alt="Boring Menu" style=";max-width:100%;">
+			<p>No matter how big and stylized a menu gets, you are still left with a bunch of buttons that take you to the same boring places. Instead, what you can do is incorporate your brand into the menu. This could mean putting in your logo, contact information, and social media links.</p>
+			<h2>HOW TO ALIGN LOGO WITH NAVIGATION BAR</h2>
+      <div class="iframe-container">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/hp-LP8Nv18s?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p>The video above by Ali Hossain shows how to add a logo to the navigation menu. His preferred alignment method, which he considers the "right" way, is to add the logo to the center of the navigation menu. However, this involves floating some of the individual li nth child elements to the left. Another approach would be to float the image to the left and leave the nav elements to their default position. </p>
+  		<h2>WHERE DO WE GO FROM HERE</h2>
+			<p>We certainly don't mind straying far from the realm of possibilities with when it comes to technology and the internet is no exception. As recently as 2018, Google implemented a virtual reality feature for people who browse the internet with such capable devices. Soon we will be able to see websites in Augmented Reality, which is a virtual reproduction of information that can only be loaded at specific real world coordinates. Imagine having to go to a specific place in the real world just to view a web page?</p>
+  		<h2>FULL SCREEN NAVIGATION RESOURCES</h2>
+			<ul>
+				<li><a href="https://giphy.com/gifs/motion-graphics-animacion-cityarts-xT0Gqn9yuw8hnPGn5K" target="_blank">Motion graphic at top of page by Giphy</a></li>
+				<li><a href="https://uxdesign.cc/rethinking-the-full-screen-menu-59c9c514e43b" target="_blank">Rethinking the full-screen </a></li>
+				<li><a href="https://dribbble.com/shots/1290195-New-Project-Responsive-Icons" target="_blank">Motion graphic for responsive design example by Joe Harrison</a></li>
+				<li><a href="https://www.youtube.com/watch?v=XYTwYmOjqQs" target="_blank">Evolution of Web Design 1990-2019.</a></li>
+        <li><a href="https://youtu.be/hp-LP8Nv18s" target="_blank">Centering a logo in your menu</a></li>
+        <li><a href="https://developers.google.com/web/updates/2018/06/ar-for-the-web" target="_blank">Google Enables VR features</a></li>
+			</ul>
+	</div> <!-- end of content wrapper -->
+	<footer>
+		<p>&copy; Copyright 2019 - Team 5 Project</p>
+	</footer>
+</body>
+</html>

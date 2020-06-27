@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- 10/10/19: Hey everyone. This is a template for our Team Website Project. I've place notes on both the HTML and CSS codes to help you understand my code. It has also been validated. Please lt me know if you have any questions or if you have any suggestions/improvements. We all need to keep the wireframe consistent so if you have any changes, please let us all know. Thank you! -->
+<!-- King David 10/21/19t -->
+<html lang="en">
+<head>
+<link rel="stylesheet" href="css/content-template.css">
+<link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet"> <!-- Embedded font for title and headings-->
+<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> <!-- Embedded font for nav links and parapgraphs -->
+
+<title>Responsive Images</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	.img {
+		text-align:center;
+	}
+	.img img {
+		max-width:100%;
+	}
+	.code {
+		background-color:#383838;
+		color:#FFF;
+		padding:0.5em;
+		max-width:100%;
+	}
+	ol li {
+		font-family: 'Lato', sans-serif;
+		color:#000;
+	}
+	#content-wrapper ul li {
+		font-family: 'Lato', sans-serif;
+	}
+	#content-wrapper ul li a:link {
+		color:#ffa500;
+		text-decoration:none;
+	}
+	#content-wrapper ul li a:hover {
+		color:#ffa500; 
+		text-decoration: underline;
+	}
+	#content-wrapper ul li a:visited {
+		color:#ffa500; 
+		text-decoration: none;
+	}
+</style>
+</head>
+<body>
+	<header>
+		<div class="title"> <!-- container for title -->
+			<h1>CURRENT WEB DEVELOPMENT TRENDS</h1>
+		</div>
+		<nav>
+			<ul><!-- Here are the links to the webpages. Make sure you link your page with the same file pathing as I did -->
+				<li><a href="responsive-images.html">Responsive Images</a></li>
+				<li><a href="responsive-web-design.html">Responsive Web Design</a></li>
+				<li><a href="html-components.html">New Standards/Components</a></li>
+				<li><a href="full-screen-nav.html">Full Screen Navigation</a></li>
+			</ul>
+		</nav>
+	<div class="clear"></div> <!-- container to clear float on both sides to even out content below; see CSS -->
+	</header>
+	<div id="content-wrapper"> <!-- Place content here-->
+		<h1>Responsive Images</h1>
+			<div class="img">
+				<img src="images/responsive-images-intro.png" alt="Multi-interface designs using responsive web design">
+			</div>
+			<h2>WHAT ARE RESPONSIVE IMAGES?</h2>
+				<p>Responsive images are images that work well on a wide variety of devices with differing screen sizes, resolutions, display density, and other such factors. It is a part of responsive web design that aims to make images universally resposnive and designed no matter what device is used and what size of the viewport it is being displayed in.</p>
+				<p>Before responsive web design (which includes responsive images) were used, most desktop screens were fixed at 800 or 1024 pixles wide, so websites were made for those sizes.SInce there were only two sizes, widths were already set in the code and didn't change when viewed on a different viewport. Can you imagine all that scrolling?</p>
+				<p>It wasn't until the early 2000s that developers created "fluid design" and "liquid layout" to fix all the hassles of fixed-width design and make websites more user-friendly on all platforms. Thus, responsive web design (and resposnive images) was born. </p>
+			<h2>WHY USE RESPONSIVE IMAGES?</h2>
+				<p>Take for example the following scenario. A common website may contain a header image and some content images below the header. It is likely that the header image spans the entire width of the header, with content images inside the body container. Here is an example:</p>
+			<div class="img">
+				<img src="images/website-example-desktop.png" alt="Example of a full-size image spanned over the header width">
+			</div>
+				<p>While this layout may work well on devices with a wider viewport such as a laptop or a desktop, it is completely different on a narrower screen that cannot fit the image as it is. Therefore, utilizing responsive images is the best option to resolve this.</p>
+			<h2>How to Create Basic Responsive Images</h2>
+				<p>Step 1) Add HTML:</p>
+<div class="code">
+<pre>&lt;img src="nature.jpg" alt="Nature" class="responsive"&gt;</pre>
+</div>
+				<p>Step 2) Add CSS:</p>
+				<p>If you want the image to scale both up and down on responsiveness, set the CSS width property to 100% and height to auto.</p>
+<div class="code">
+<pre>.responsive {
+	width:100%;
+	height:auto;
+}
+</pre>
+</div>
+				<p>If you want ans image to scale down if it has to, but never scale up to be larger than its original size, use "max-width: 100%"</p>
+<div class="code">
+<pre>.responsive {
+	max-width:100%;
+	height:auto;
+}
+</pre>
+</div>
+				<p>If you want to restrict a responsive image to a maximum size, use the "max-width" property, with a pixel value, em unit, or other sizing unit (except percentages) of your choice:</p>
+<div class="code">
+<pre>.responsive {
+	width:100%;
+	max-width:20vw;
+	height:auto;
+}
+</pre>
+</div>
+				<p>Now if this image were to be set as a header image, the basic responsive principles would take effect, but would not always work for the better. For example, if the responsive header image above is viewed on a smaller screen, the image would look okay, but would start to take up a lot of height, making it difficult to see the rest of the content such as the image. To remedy this issue, we have to utilize something called art direction.</p>
+			<h2>ART DIRECTION</h2>
+				<p>Whenever we need to make changes to content or aspect ratio of an image based on the size of the image in the page, we are utilizing art direction. This displays a cropped version of the image which displays the important details of the image when the site is viewed on a narrow screen. The second cropped image could be displayed for a medium width screen device, such as a tablet. For example, the image below can be cropped to close in on a specific detail.</p>
+			<div class="img">
+				<img src="images/art-direction.jpg" alt="Example of art direction">
+			</div>
+				<p>In addition, there is no need to embed such large images if it being viewed on a mobile screen. We’ve all experienced that issue where we blow up an image that’s way past its original size; it looks grainy, blurry, and ugly. In such a case, one thing we can use to resolve this is called resolution switching. This refers to any scenario where we provide different sizes of an image without making modifications to the content or aspect ratio. </p>
+			<h2>RESOLUTION SWITCHING</h2>
+				<p>Resolution switching is similar to applying art direction; rather than cropping an image to capture the important details of an image, we simply link multiple images that adjusts accordingly to the viewport. In doing so, we can ensure high quality images no matter how small or large a device is. Now, a standard &lt;img&gt; element traditionally only lets us point the browser to a single source file:
+<div class="code">
+<pre>&lt;img src="mountain-top-800w.jpg" alt="Peak of mountain"&gt;</pre>
+</div>
+				<p>So far in this class, we've only sourced images right from their file using the "src" attribute inside an "img" tag. However, we can also use two other attributes -- "srcset" and "sizes" -- to add more source images along with directions to help the browser pick the right one.</p>
+				<p>The "srcset" attribute defines the set of images we provide for the browser to choose from, along with the size of the image. These various images are typically scaled and cropped using art direction. In addition, the "sizes" attribute defines a set of conditions in the media itself (such as screen width) and indicates which image size would be the best to use in a specific circumstance. Here is an example of integrated resolution switching using both attributes:
+<div class="code">
+<pre>&lt;img srcset="mountain-top-320w.jpg 320w,
+	     mountain-top-480w.jpg 480w,
+	     mountain-top-800w.jpg 800w"
+     sizes="(max-width:320px) 280px,
+	    (max-width:480px) 440px,
+	    800px"
+     src="mountain-top-800w.jpg" alt="Peak of mountain"&gt;
+</pre>
+</div>		
+				<p>With these attrubutes specified, the browser will:</p>
+				<ol>
+					<li>Determine its device width</li>
+					<li>Go through which media condition in the given sizes is the first to be a true statement</li>
+					<li>Look at the slot size provided to that specific media query</li>
+					<li>Load the referenced image in the "srcset" list that best fulfills the specified conditions in the slot size</li>
+				</ol>
+				<p>Therefore, depending on the sizes of the "max-width" property, the browser will automatically adjust which image to display, ensuring the best possible image quality.</p>
+			<h2>RESPONSIVE IMAGES RESOURCES</h2>
+			<ul>
+				<li><a href="https://exsite.ie/history-of-responsive-web-design/" target="_blank">History of Responsive Images</a></li>
+				<li><a href="https://www.w3schools.com/howto/howto_css_image_responsive.asp" target="_blank">How TO - Responsive Images - W3Schools.com</a></li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images" target="_blank">Learn Web Development - Multimedia & Embedding - Responsive Images</a></li>
+				<li><a href="https://cloudfour.com/thinks/responsive-images-101-definitions/" target="_blank">Cloud Four Responsive Images 101 - How to Create Responsive Images Part I</a></li>
+			</ul>
+	</div> <!-- end of content wrapper -->
+	<footer>
+		<p>&copy; Copyright 2019 - Team 5 Project</p>
+	</footer>
+</body>
+</html>

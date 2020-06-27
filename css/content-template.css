@@ -1,0 +1,139 @@
+/* Start of mobile styles */
+
+/* Removes the white space on the margins */
+body {
+	margin:0;
+}
+
+/* Styles for heading and footer */
+header, footer {
+	background:#000080;
+	padding:0.5em;
+	color:#FFF;
+	text-align:center;
+	}
+
+/* Pushes nav to the left to compensate for the margin list items create */
+nav {
+	margin-left:-2em;
+}
+
+nav li{
+	display:inline-block;
+}
+
+/* Styles for the title */
+.title h1 {
+	font-family: 'Catamaran', sans-serif;
+	color:#FFF;
+
+}
+
+/* Styles for main heading */
+h1 {
+	font-family: 'Catamaran', sans-serif;
+	color:#000;
+	text-align:center;
+}
+
+/* Styles for subheadings */
+h2 {
+	font-family: 'Catamaran', sans-serif;
+	color:#000;
+}
+
+/* Styles for paragraphs */
+p {
+	font-family: 'Lato', sans-serif;
+	color:#000;
+}
+
+/* Styles for content wrapper */
+#content-wrapper {
+	max-width:100%;
+	margin:auto;
+	padding:1em;
+}
+
+/* Placement styles for nav links */
+nav li{
+	font-family: 'Lato', sans-serif;
+	list-style-type:none;
+	padding:0.5em;
+}
+
+/* Styles for active nav link */
+nav li a:link {
+	color:#FFF;
+	text-decoration:none;
+}
+
+/* Styles for nav links when hovered */
+nav li a:hover {
+	color:#FFF;
+	text-decoration: underline;
+	}
+
+/* Styles for nav links after visited */
+nav li a:visited {
+	color:#FFF;
+	text-decoration: none;
+	}
+
+
+/* Footer text styles */
+footer p{
+	text-align:center;
+	color:#FFF;
+}
+.desktop {
+	display:none;
+}
+.tablet {
+	display:none;
+}
+/* End of mobile styles */
+
+
+
+
+
+/* Media query for tablet viewport targets screen size with a minimum width of 481px. */
+@media only screen and (min-width: 481px) {
+	/* Optional div display styles for tablet viewport */
+	.desktop {
+		display:none;
+	}
+	.mobile {
+		display:none;
+	}
+	.tablet {
+		display: inline;
+	}
+}
+
+/* Media query for desktop viewport targets screens with a minimum width of 769px. */
+@media only screen and (min-width: 769px) {
+	#content-wrapper {
+		width:60%;
+	}
+
+/* Creates an equal padding inside the header and footer */
+	header, footer {
+		padding:0.5em 2em;
+	}
+/* Displays nav-bar in a blocked list format depending on viewport size */
+	nav li {
+		display:inline-block;
+	}
+	/* Optional div display styles for tablet viewport */
+	.desktop {
+		display:inline;
+	}
+	.mobile {
+		display:none;
+	}
+	.tablet {
+		display:none;
+	}
+}
